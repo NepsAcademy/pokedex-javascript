@@ -25,7 +25,8 @@
 
         <v-row>
           <v-col
-            cols="2"
+            cols="6"
+            md="2"
             v-for="pokemon in filtered_pokemons"
             :key="pokemon.name"
           >

@@ -3,14 +3,14 @@
     <v-card v-if="selected_pokemon" class="px-4">
       <v-container>
         <v-row class="d-flex align-center">
-          <v-col cols="4">
+          <v-col cols="12" md="4">
             <img
               :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${selected_pokemon.id}.png`"
               :alt="selected_pokemon.name"
               width="80%"
             />
           </v-col>
-          <v-col cols="8">
+          <v-col cols="12" md="8">
             <h1>{{ get_name(selected_pokemon) }}</h1>
             <PokemonType
               v-for="type in selected_pokemon.types"
@@ -30,7 +30,7 @@
           </v-col>
         </v-row>
 
-        <h2>Stats</h2>
+        <h2 class="mt-4">Stats</h2>
 
         <Stats class="mt-2" :pokemon="selected_pokemon" />
 

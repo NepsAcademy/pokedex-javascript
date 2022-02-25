@@ -1,7 +1,8 @@
 <template>
   <v-row>
     <v-col
-      cols="2"
+      cols="12"
+      md="2"
       v-for="(stat, index) in pokemon.stats"
       :key="stat.stat.name"
     >

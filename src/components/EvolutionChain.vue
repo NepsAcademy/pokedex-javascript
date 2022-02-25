@@ -3,13 +3,14 @@
     <v-row class="mx-0 d-flex align-center">
       <template v-for="(evolution_detail, index) in evolutions()">
         <v-col
-          cols="3"
+          cols="12"
+          md="3"
           :key="`evolution-${index}`"
           v-if="typeof evolution_detail == 'object'"
         >
           <PokemonCard :pokemon="evolution_detail" flat />
         </v-col>
-        <v-col cols="1" :key="`evolution-${index}`" v-else>
+        <v-col md="1" :key="`evolution-${index}`" v-else>
           <h3 class="text-center">L {{ evolution_detail }}</h3>
         </v-col>
       </template>
