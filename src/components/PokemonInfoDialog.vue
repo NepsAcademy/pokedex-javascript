@@ -144,7 +144,6 @@ export default {
       }
 
       for (let move_type in response) {
-        console.log(move_type);
         response[move_type].sort((a, b) => {
           let level_a = a.level;
           let level_b = b.level;
