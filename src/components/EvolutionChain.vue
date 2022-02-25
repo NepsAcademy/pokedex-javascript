@@ -34,18 +34,14 @@ export default {
     pokemon: Object,
   },
   mounted() {
-    console.log(this.pokemon);
     this.fetch_evolution();
   },
   methods: {
     fetch_evolution() {
-      console.log(this.pokemon.id);
       axios
         .get(`https://pokeapi.co/api/v2/pokemon-species/${this.pokemon.id}`)
         .then((response) => {
-          console.log(response);
           axios.get(response.data.evolution_chain.url).then((response) => {
-            console.log(response);
             this.evolution = response.data.chain;
           });
         });
@@ -81,7 +77,6 @@ export default {
   },
   watch: {
     pokemon() {
-      console.log(this.pokemon);
       this.fetch_evolution();
     },
   },
